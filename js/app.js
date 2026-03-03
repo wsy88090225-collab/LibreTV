@@ -1,4 +1,7 @@
-// 全局变量
+// 强制伪装成手机，解除大屏限制
+Object.defineProperty(navigator, 'userAgent', {
+  value: 'Mozilla/5.0 (Mobile; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36'
+});// 全局变量
 let selectedAPIs = JSON.parse(localStorage.getItem('selectedAPIs') || '["tyyszy","dyttzy", "bfzy", "ruyi"]'); // 默认选中资源
 let customAPIs = JSON.parse(localStorage.getItem('customAPIs') || '[]'); // 存储自定义API列表
 
